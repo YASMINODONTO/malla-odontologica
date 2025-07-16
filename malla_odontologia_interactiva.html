@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odontología - Plan Completo</title>
+  <style>
+    body { font-family: sans-serif; background: #f0f4f8; padding: 2rem; }
+    h1, h2 { text-align: center; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .materia { background: white; border-radius: 8px; padding: 1rem; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: all 0.3s; }
+    .materia:hover { background: #e6f0ff; }
+    .detalle { margin-top: 1rem; background: #fff; padding: 1rem; border-left: 4px solid #007bff; border-radius: 6px; display: none; }
+  </style>
+</head>
+<body>
+  <h1>Malla Interactiva - Odontología (UBA)</h1>
+
+  <h2>Primer Año</h2>
+  <div class="grid">
+    <div class="materia" onclick="mostrarDetalle('anatomia')">Anatomía Humana Normal</div>
+    <div class="materia" onclick="mostrarDetalle('histologia')">Histología y Embriología General</div>
+    <div class="materia" onclick="mostrarDetalle('biofisica')">Biofísica</div>
+    <div class="materia" onclick="mostrarDetalle('biologia')">Biología Celular y Molecular</div>
+    <div class="materia" onclick="mostrarDetalle('quimica')">Química Biológica</div>
+    <div class="materia" onclick="mostrarDetalle('psico')">Psicología General</div>
+  </div>
+
+  <h2>Segundo Año</h2>
+  <div class="grid">
+    <div class="materia" onclick="mostrarDetalle('fisio')">Fisiología</div>
+    <div class="materia" onclick="mostrarDetalle('micro')">Microbiología</div>
+    <div class="materia" onclick="mostrarDetalle('bioetica')">Bioética</div>
+    <div class="materia" onclick="mostrarDetalle('patologia')">Patología General</div>
+    <div class="materia" onclick="mostrarDetalle('inmuno')">Inmunología</div>
+  </div>
+
+  <h2>Tercer Año</h2>
+  <div class="grid">
+    <div class="materia" onclick="mostrarDetalle('clinica1')">Clínica Estomatológica I</div>
+    <div class="materia" onclick="mostrarDetalle('patologia2')">Patología Bucal</div>
+    <div class="materia" onclick="mostrarDetalle('radiologia')">Radiología</div>
+    <div class="materia" onclick="mostrarDetalle('protesis')">Prótesis Parcial Removible</div>
+    <div class="materia" onclick="mostrarDetalle('operatoria')">Operatoria Dental I</div>
+  </div>
+
+  <h2>Cuarto Año</h2>
+  <div class="grid">
+    <div class="materia" onclick="mostrarDetalle('clinica2')">Clínica Estomatológica II</div>
+    <div class="materia" onclick="mostrarDetalle('endodoncia')">Endodoncia</div>
+    <div class="materia" onclick="mostrarDetalle('periodoncia')">Periodoncia</div>
+    <div class="materia" onclick="mostrarDetalle('cirugia')">Cirugía</div>
+    <div class="materia" onclick="mostrarDetalle('ortodoncia')">Ortodoncia</div>
+  </div>
+
+  <h2>Quinto Año</h2>
+  <div class="grid">
+    <div class="materia" onclick="mostrarDetalle('clinica3')">Clínica Estomatológica III</div>
+    <div class="materia" onclick="mostrarDetalle('odontopediatria')">Odontopediatría</div>
+    <div class="materia" onclick="mostrarDetalle('protesis2')">Prótesis Fija</div>
+    <div class="materia" onclick="mostrarDetalle('integracion')">Integración Odontológica</div>
+  </div>
+
+  <!-- DETALLES -->
+  <div id="anatomia" class="detalle">
+    <strong>Anatomía Humana Normal</strong><br>
+    Correlativas: Ninguna<br>
+    Carga Horaria: 128 hs
+  </div>
+  <div id="histologia" class="detalle">
+    <strong>Histología y Embriología General</strong><br>
+    Correlativas: Ninguna<br>
+    Carga Horaria: 96 hs
+  </div>
+  <div id="biofisica" class="detalle">
+    <strong>Biofísica</strong><br>
+    Correlativas: Ninguna<br>
+    Carga Horaria: 64 hs
+  </div>
+  <div id="biologia" class="detalle">
+    <strong>Biología Celular y Molecular</strong><br>
+    Correlativas: Ninguna<br>
+    Carga Horaria: 64 hs
+  </div>
+  <div id="quimica" class="detalle">
+    <strong>Química Biológica</strong><br>
+    Correlativas: Biología Celular y Molecular<br>
+    Carga Horaria: 64 hs
+  </div>
+  <div id="psico" class="detalle">
+    <strong>Psicología General</strong><br>
+    Correlativas: Ninguna<br>
+    Carga Horaria: 64 hs
+  </div>
+
+  <div id="fisio" class="detalle">
+    <strong>Fisiología</strong><br>
+    Correlativas: Biofísica, Anatomía Humana Normal
+  </div>
+  <div id="micro" class="detalle">
+    <strong>Microbiología</strong><br>
+    Correlativas: Química Biológica, Biología Celular y Molecular
+  </div>
+  <div id="bioetica" class="detalle">
+    <strong>Bioética</strong><br>
+    Correlativas: Psicología General
+  </div>
+  <div id="patologia" class="detalle">
+    <strong>Patología General</strong><br>
+    Correlativas: Histología, Fisiología
+  </div>
+  <div id="inmuno" class="detalle">
+    <strong>Inmunología</strong><br>
+    Correlativas: Microbiología
+  </div>
+
+  <div id="clinica1" class="detalle">
+    <strong>Clínica Estomatológica I</strong><br>
+    Correlativas: Patología General, Microbiología
+  </div>
+  <div id="patologia2" class="detalle">
+    <strong>Patología Bucal</strong><br>
+    Correlativas: Patología General
+  </div>
+  <div id="radiologia" class="detalle">
+    <strong>Radiología</strong><br>
+    Correlativas: Anatomía Humana Normal, Biofísica
+  </div>
+  <div id="protesis" class="detalle">
+    <strong>Prótesis Parcial Removible</strong><br>
+    Correlativas: Anatomía, Clínica Estomatológica I
+  </div>
+  <div id="operatoria" class="detalle">
+    <strong>Operatoria Dental I</strong><br>
+    Correlativas: Clínica Estomatológica I
+  </div>
+
+  <div id="clinica2" class="detalle">
+    <strong>Clínica Estomatológica II</strong><br>
+    Correlativas: Clínica Estomatológica I, Patología Bucal
+  </div>
+  <div id="endodoncia" class="detalle">
+    <strong>Endodoncia</strong><br>
+    Correlativas: Clínica Estomatológica I
+  </div>
+  <div id="periodoncia" class="detalle">
+    <strong>Periodoncia</strong><br>
+    Correlativas: Clínica Estomatológica I
+  </div>
+  <div id="cirugia" class="detalle">
+    <strong>Cirugía</strong><br>
+    Correlativas: Clínica Estomatológica I, Anatomía
+  </div>
+  <div id="ortodoncia" class="detalle">
+    <strong>Ortodoncia</strong><br>
+    Correlativas: Anatomía, Psicología General
+  </div>
+
+  <div id="clinica3" class="detalle">
+    <strong>Clínica Estomatológica III</strong><br>
+    Correlativas: Clínica Estomatológica II
+  </div>
+  <div id="odontopediatria" class="detalle">
+    <strong>Odontopediatría</strong><br>
+    Correlativas: Clínica Estomatológica II
+  </div>
+  <div id="protesis2" class="detalle">
+    <strong>Prótesis Fija</strong><br>
+    Correlativas: Prótesis Parcial Removible
+  </div>
+  <div id="integracion" class="detalle">
+    <strong>Integración Odontológica</strong><br>
+    Correlativas: Todas las materias anteriores aprobadas
+  </div>
+
+  <script>
+    function mostrarDetalle(id) {
+      document.querySelectorAll('.detalle').forEach(div => div.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
